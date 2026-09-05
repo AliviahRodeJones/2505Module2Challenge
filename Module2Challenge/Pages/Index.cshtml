@@ -18,13 +18,13 @@
 </form>
 
 @if (Model.showResult)
-{<!--This code only runs if the showResult variable is true. This displays a message on the page for the 
-user that includes the milesDriven and gallonsUsed values they entered, and the final calculated milesPerGallon. -->} 
+
 {
     <p>You traveled: @Model.milesDriven miles and used @Model.gallonsUsed gallons of gas. 
         That means your vehicle uses @Model.milesPerGallon miles to the gallon.</p>
 }
-
+<!--This code only runs if the showResult variable is true. This displays a message on the page for the 
+user that includes the milesDriven and gallonsUsed values they entered, and the final calculated milesPerGallon. -->
 </div>
 
 
