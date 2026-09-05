@@ -7,14 +7,19 @@
 <form method="post">
     <label for="milesDriven">Number of Miles Driven</label>
     <input type="number" id="milesDriven" name="milesDriven" step="any" />
-    
+    <!-- The label for the milesDriven input. Allows float values. -->
+
     <label for="gallonsUsed">Gallons of Gas Used</label>
     <input type="number" id="gallonsUsed" name="gallonsUsed" step="any" />
+    <!-- The label for the gallonsUsed input. Allows float values. -->
 
     <button type="submit">Calculate Miles Per Gallon</button>
+    <!-- Button that submits the previous inputted data -->
 </form>
 
-@if (Model.ShowResult)
+@if (Model.showResult)
+{<!--This code only runs if the showResult variable is true. This displays a message on the page for the 
+user that includes the milesDriven and gallonsUsed values they entered, and the final calculated milesPerGallon. -->} 
 {
     <p>You traveled: @Model.milesDriven miles and used @Model.gallonsUsed gallons of gas. 
         That means your vehicle uses @Model.milesPerGallon miles to the gallon.</p>

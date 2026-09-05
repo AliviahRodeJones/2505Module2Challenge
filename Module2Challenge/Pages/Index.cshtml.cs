@@ -16,12 +16,12 @@ public class IndexModel : PageModel
     // This variable holds the amount of gas used that the user enters.
     public double milesPerGallon { get; set; }
     // A variable for the to-be-calculated miles per gallon.
-    public bool ShowResult { get; set; }
+    public bool showResult { get; set; }
     // This variable tells the page to show the result.
 
     public void OnGet()
     {
-        ShowResult = false;
+        showResult = false;
         // When the page is accessed by any user, ShowResult is automatically set to false,
         //  so it doesn't show the blank result info.
     }
@@ -32,7 +32,7 @@ public class IndexModel : PageModel
         milesPerGallon = MPG;
         // This block of code calculates the miles per gallon based on the user entered 
          
-        ShowResult = true;
+        showResult = true;
         // The page now shows the result of the calculation.
     }
 }
