@@ -5,12 +5,21 @@
 }
 <div>
 <form method="post">
+    <label for="milesDriven">Number of Miles Driven</label>
+    <input type="number" id="milesDriven" name="milesDriven" step="any" />
+    
+    <label for="gallonsUsed">Gallons of Gas Used</label>
+    <input type="number" id="gallonsUsed" name="gallonsUsed" step="any" />
 
+    <button type="submit">Calculate Miles Per Gallon</button>
 </form>
+
+@if (Model.ShowResult)
+{
+    <p>You traveled: @Model.milesDriven miles and used @Model.gallonsUsed gallons of gas. 
+        That means your vehicle uses @Model.milesPerGallon miles to the gallon.</p>
+}
 
 </div>
 
-<!--<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>-->
+
